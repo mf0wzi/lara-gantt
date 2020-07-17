@@ -1,5 +1,8 @@
 <script type="application/javascript">
-    var data = {!! $data !!};
+    var data = {!! $datajson !!};
+        {!! $customcontroller !!}
+        {!! $customfunction !!}
+
     gantt.init("{!! $element !!}_gantt");
     gantt.parse(data);
 </script>
