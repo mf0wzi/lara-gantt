@@ -1,4 +1,4 @@
-<script id="map-function" type="application/javascript">
+<script id="gantt-function" type="application/javascript">
 
     {!! $customfunction !!}
 
