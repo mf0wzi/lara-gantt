@@ -1,8 +1,8 @@
 {
     "name": "noonenew/laramapleaflet",
-    "description": "Simple package to facilitate and automate the use of maps in Laravel 5.x using leaflet v1 library",
+    "description": "Simple package to facilitate and automate the use of maps in Laravel 5.x using Dhmtlx Gantt v7 library",
     "keywords": [
-      "leaflet","laravel5","maps","noonenew"
+      "leaflet","laravel5","gantt","noonenew"
     ],
     "license": "MIT",
     "authors": [
@@ -18,14 +18,14 @@
 
     "autoload": {
       "psr-4": {
-        "Noonenew\\LaravelLeafLet\\" : "src/"
+        "Noonenew\\LaravelGanttChart\\" : "src/"
       }
     },
     
     "extra": {
         "laravel": {
             "providers": [
-                "Noonenew\\LaravelLeafLet\\Providers\\LeafletServiceProvider"
+                "Noonenew\\LaravelGanttChart\\Providers\\LeafletServiceProvider"
             ]
         }
     }
