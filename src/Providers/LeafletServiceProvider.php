@@ -3,7 +3,7 @@
 use Noonenew\LaravelGanttChart\Builder;
 use Illuminate\Support\ServiceProvider;
 
-class LeafletServiceProvider extends ServiceProvider
+class GanttChartServiceProvider extends ServiceProvider
 {
 
     /**
