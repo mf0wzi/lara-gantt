@@ -1,6 +1,6 @@
-<?php namespace Noonenew\LaravelLeafLet\Providers;
+<?php namespace Noonenew\LaravelGanttChart\Providers;
 
-use Noonenew\LaravelLeafLet\Builder;
+use Noonenew\LaravelGanttChart\Builder;
 use Illuminate\Support\ServiceProvider;
 
 class LeafletServiceProvider extends ServiceProvider
@@ -14,8 +14,8 @@ class LeafletServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'map-template');
-        $this->colours = config('mapleaflet.colours');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'gantt-template');
+        $this->colours = config('ganttchart.colours');
     }
 
 
@@ -26,7 +26,7 @@ class LeafletServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('mapleaflet', function() {
+        $this->app->bind('ganttchart', function() {
             return new Builder();
         });
     }
