@@ -80,12 +80,14 @@ class Builder
      */
     public function datajson($datajson)
     {
-        if (is_array($datajson)) {
-            $this->set('datajson', json_encode($datajson, true));
-            return $this;
-        }
 
-        $this->set('datajson', $datajson);
+//        if (is_array($datajson)) {
+//            dd(json_encode($datajson, true));
+//            $this->set('datajson', json_encode($datajson, true));
+//            return $this;
+//        }
+
+        $this->set('datajson', json_encode($datajson, true));
         return $this;
     }
 
@@ -162,11 +164,12 @@ class Builder
         $gantchart = $this->gantt[$this->name];
         //dd($map['datasets']);
         return view('gantt-template::gantt-template')
-                ->with('datasets', $gantchart['datasets'])
+                ->with('datajson', $gantchart['datajson'])
                 ->with('element', $this->name)
                 ->with('labels', $gantchart['labels'])
                 ->with('options', isset($gantchart['options']) ? $gantchart['options'] : '')
                 ->with('customcontroller', $gantchart['customcontroller'])
+                ->with('customfunction', $gantchart['customfunction'])
                 ->with('type', $gantchart['type'])
                 ->with('size', $gantchart['size']);
     }
@@ -186,12 +189,12 @@ class Builder
         $gantchart = $this->gantt[$this->name];
 
         return view('gantt-template::gantt-template-script')
-            ->with('datasets', $gantchart['datasets'])
+            ->with('datajson', $gantchart['datajson'])
             ->with('element', $this->name)
             ->with('labels', $gantchart['labels'])
             ->with('customcontroller', $gantchart['customcontroller'])
+            ->with('customfunction', $gantchart['customfunction'])
             ->with('type', $gantchart['type'])
-            ->with('datajson', $gantchart['datajson'])
             ->with('size', $gantchart['size']);
     }
 
