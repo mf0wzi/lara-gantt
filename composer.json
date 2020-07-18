@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Noonenew\\LaravelGanttChart\\Providers\\GranttChartServiceProvider"
+                "Noonenew\\LaravelGanttChart\\Providers\\GanttChartServiceProvider"
             ]
         }
     }
