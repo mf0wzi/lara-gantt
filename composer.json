@@ -1,6 +1,6 @@
 {
     "name": "noonenew/laraganttchart",
-    "description": "Simple package to facilitate and automate the use of maps in Laravel 5.x using Dhmtlx Gantt v7 library",
+    "description": "Simple package to facilitate and automate the use of gantt in Laravel 5.x using Dhmtlx Gantt v7 library",
     "keywords": [
       "leaflet","laravel5","gantt","noonenew"
     ],
